@@ -23,13 +23,13 @@ A step by step series of examples that tell you how to get a development env run
 - clone this repository
 
 ```
-git clone https://github.com/maimitp9/repo_name.git
+git clone https://github.com/maimitp9/photo_tweet_app.git
 ```
 
 - Move to application folder after repository clone completed
 
 ```
-cd repo_name
+cd photo_tweet_app
 ```
 
 - Inatall bundle to install the application dependencey
