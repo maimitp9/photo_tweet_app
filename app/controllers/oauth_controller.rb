@@ -11,7 +11,7 @@ class OauthController < ApplicationController
   # callback url called from authorization provider with authorization code
   def callback
     response = get_token(params["code"]) # call with autorization code to fetch access_token
-    auth_token response["access_token"] if response["access_token"] # set access token into sression if any
+    auth_token response["access_token"] if response["access_token"] # set access token into session if any
     redirect_to images_path
   end
 end
