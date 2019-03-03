@@ -1,0 +1,4 @@
+<%# navigation bar %>
+<% if logged_in? %>
+  <%= link_to t('screen.log_out.link'), logout_path, method: :delete %>
+<% end %>

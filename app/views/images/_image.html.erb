@@ -1,0 +1,13 @@
+<%# use where we requred to iterate @images collection %>
+<div class="content">
+  <div class="title">
+    <%= image.title %>
+  </div>
+  <div>
+    <%= image_tag(image.photo, class: 'img') if image.photo.attached?%>
+  </div>
+  <div class="title">
+    <%= link_to t('screen.images.index.tweet_btn'), image_share_path(image) if authorized? %>
+  </div>
+</div>
+  

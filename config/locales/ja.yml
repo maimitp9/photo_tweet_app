@@ -1,0 +1,60 @@
+ja:
+  hello: "こんにちは"
+  activerecord:
+    attributes:
+      image:
+        title: "タイトル"
+    errors:
+      models:
+        image:
+          attributes:
+            title:
+              blank: "を入力してください"
+              too_long: "の文字数が30文字を超えている"
+  activemodel:
+    attributes:
+      validation/log_in:
+        user_name: "ユーザーID"
+        password: "パスワード"
+    errors:
+      models:
+        validation/log_in:
+          attributes:
+            user_name:
+              blank: "を入力してください"
+            password: 
+              blank: "を入力してください"
+  errors:
+    log_in:
+      create: "ユーザーIDとパスワードが一致するユーザーが存在しない"
+      unautenticate: "Plese log in."
+    images:
+      share: "Error while tweet, contact to administrator."
+  success:
+    images:
+      created: "Photo was created successfully."
+      share: "Photo was tweet successfully."
+  screen:
+    app_name: "写真管理アプリケーション"
+    log_in:
+      title: "ログイン"
+      user_name: "ユーザーID"
+      password: "パスワード"
+      btn: "ログインする"
+    log_out:
+      link: "ログアウト"
+    images:
+      index:
+        title: "写真一覧"
+        my_tweet_link: "MyTweetAppと連携"
+        my_tweet_link_after: "MyTweetAppと承認中"
+        tweet_btn: "TWEET"
+      new:
+        title: "写真アップロード"
+        new_image_btn: "写真アップロード画面"
+        title_field: "タイトル"
+        file_field: "画像ファイル"
+        save_btn: "アップロード"
+      errors:
+        reuired_file: "画像ファイルを入力してください"
+    cancel_btn: "キャンセル"

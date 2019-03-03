@@ -1,0 +1,16 @@
+<% title t('screen.log_in.title') %>
+<h1><%= t('screen.log_in.title') %></h1>
+<%= render partial: 'shared/errors', locals: { object: @user } %>
+<div>
+  <%= form_for(:session, url: login_path) do |f| %>
+    <div>
+      <%= f.label t('screen.log_in.user_name') %>
+      <%= f.text_field :user_name, value: params[:session].present? ? params[:session][:user_name] : nil, autofocus: true %>
+    </div>
+    <div>
+      <%= f.label t('screen.log_in.password') %>
+      <%= f.password_field :password %>
+    </div>
+    <%= f.submit t('screen.log_in.btn') %>
+  <% end %>
+</div>

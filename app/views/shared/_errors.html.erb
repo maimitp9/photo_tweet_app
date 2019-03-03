@@ -1,0 +1,14 @@
+<%# use to display ActiveRecord errors %>
+<div>
+  <% if object.present? %>
+    <% if object.errors.any? %>
+      <div>
+        <ul>
+          <% object.errors.full_messages.each do |msg| %>
+              <li class="error"><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %> 
+  <% end %>
+</div>

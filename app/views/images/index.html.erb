@@ -1,0 +1,7 @@
+<% title t('screen.images.index.title') %>
+<h1><%= t('screen.images.index.title') %></h1>
+<%= render 'tweet_link' %>
+<div class="field">
+  <%= link_to t('screen.images.new.new_image_btn'), new_image_path%>
+</div>
+<%= render @images %>

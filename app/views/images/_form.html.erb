@@ -1,0 +1,17 @@
+<%= render partial: 'shared/errors', locals: { object: @image } %>
+<div>
+  <%= form_for @image do |f| %>
+    <div class="field">
+      <%= f.label t('screen.images.new.title_field') %>
+      <%= f.text_field :title, value: params[:image].present? ? params[:image][:title] : nil, autofocus: true %>
+    </div>
+    <div class="field">
+      <%= f.label t('screen.images.new.file_field') %>
+      <%= f.file_field :photo %>
+    </div>
+    <div class="field">
+      <%= f.submit t('screen.images.new.save_btn') %>
+      <%= link_to t('screen.cancel_btn'), images_path %>
+    </div>
+  <% end %>
+</div>

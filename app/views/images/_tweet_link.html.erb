@@ -1,0 +1,6 @@
+<%# use this partial where we want this link %>
+<% if authorized? %>
+  <h4><%= t('screen.images.index.my_tweet_link_after') %></h4>
+<% else %>
+  <%= link_to t('screen.images.index.my_tweet_link'), oauth_authorize_path %>
+<% end %>
