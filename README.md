@@ -71,7 +71,7 @@ For this applicaion Rails-5.2 default test framework - [Minitest](https://guides
 Run this command
 
 ```
-rails tests
+rails test
 ```
 
 All the tests should be *GREEN* to pass all test cases
