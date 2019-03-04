@@ -1,6 +1,6 @@
 # Photo Tweet Application
 
-Photos are uploded by the user and tweet that photos to Remote server by using oAuth authorization
+Photos are uploded by the user and tweet that photos to Remote server by using [oAuth](https://oauth.net/2/) authorization
 
 ## Getting Started
 
