@@ -1,6 +1,6 @@
 # Photo Tweet Application
 
-Photos are uploded by the user and tweet that photos to [UniFa](https://unifa-e.com/)
+Photos are uploded by the user and tweet that photos to Remote server by using oAuth authorization
 
 ## Getting Started
 
