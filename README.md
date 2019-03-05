@@ -59,7 +59,7 @@ rails db:seed
 
 ## Running Tests
 
-For this applicaion Rails-5.2 default test framework - [Minitest](https://guides.rubyonrails.org/testing.html) 
+For this application Rails-5.2 default test framework - [Minitest](https://guides.rubyonrails.org/testing.html) 
 
 ### Test includes
 
