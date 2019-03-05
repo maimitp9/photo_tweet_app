@@ -115,6 +115,13 @@ rails c
   ```
   user = User.find_by(user_name: 'test_user')
   ```
+  
+  - include this module to create *ActionDispatch::Http::UploadedFile* object by calling *upload_file* method implemented in it
+  
+  ```
+  include CustomActiveStorage
+  ```
+  
   - create image with attachemnt belongs to above user
 
   ```
