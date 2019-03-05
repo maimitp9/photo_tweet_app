@@ -10,11 +10,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 * Ruby version
 
-  - ruby-2.4.2
+  - Ruby-2.6.1
 
 * Rails vesrion
 
-  - Rails 5.2 
+  - Rails-5.2 
 
 ### Installing
 
