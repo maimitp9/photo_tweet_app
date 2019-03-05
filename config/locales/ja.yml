@@ -27,13 +27,13 @@ ja:
   errors:
     log_in:
       create: "ユーザーIDとパスワードが一致するユーザーが存在しない"
-      unautenticate: "Plese log in."
+      unautenticate: "ログインが必要です。続行するにはログインしてください。"
     images:
-      share: "Error while tweet, contact to administrator."
+      share: "エラーが発生されました、管理者に連絡お願いいたします。"
   success:
     images:
-      created: "Photo was created successfully."
-      share: "Photo was tweet successfully."
+      created: "写真をアップロード完了しました。"
+      share: "Tweetをできました。"
   screen:
     app_name: "写真管理アプリケーション"
     log_in:
@@ -48,7 +48,7 @@ ja:
         title: "写真一覧"
         my_tweet_link: "MyTweetAppと連携"
         my_tweet_link_after: "MyTweetAppと承認中"
-        tweet_btn: "TWEET"
+        tweet_btn: "ツイートする"
       new:
         title: "写真アップロード"
         new_image_btn: "写真アップロード画面"
