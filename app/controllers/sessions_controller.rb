@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
       log_in user
       redirect_to root_path
     else
-      flash[:error] = I18n.t('errors.log_in.create')
+      flash.now[:error] = I18n.t('errors.log_in.create')
       render :new
     end
   end
@@ -33,7 +33,6 @@ class SessionsController < ApplicationController
   def validate_params
     @user =  Validation::LogIn.new(params[:session])
     if !@user.valid?
-      flash[:error] = ""
       render :new
     end
   end

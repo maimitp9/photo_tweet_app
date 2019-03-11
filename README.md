@@ -1,6 +1,6 @@
 # Photo Tweet Application
 
-Photos are uploded by the user and tweet that photos to [UniFa](https://unifa-e.com/)
+Photos are uploded by the user and tweet that photos to Remote server by using [oAuth](https://oauth.net/2/) authorization
 
 ## Getting Started
 
@@ -10,11 +10,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 * Ruby version
 
-  - ruby-2.4.2
+  - Ruby-2.6.1
 
 * Rails vesrion
 
-  - Rails 5.2 
+  - Rails-5.2 
 
 ### Installing
 
@@ -59,7 +59,7 @@ rails db:seed
 
 ## Running Tests
 
-For this applicaion Rails-5.2 default test framework - [Minitest](https://guides.rubyonrails.org/testing.html) 
+For this application Rails-5.2 default test framework [Minitest](https://guides.rubyonrails.org/testing.html) used
 
 ### Test includes
 
@@ -71,7 +71,7 @@ For this applicaion Rails-5.2 default test framework - [Minitest](https://guides
 Run this command
 
 ```
-rails tests
+rails test
 ```
 
 All the tests should be *GREEN* to pass all test cases
@@ -115,6 +115,13 @@ rails c
   ```
   user = User.find_by(user_name: 'test_user')
   ```
+  
+  - include this module to create *ActionDispatch::Http::UploadedFile* object by calling *upload_file* method implemented in it
+  
+  ```
+  include CustomActiveStorage
+  ```
+  
   - create image with attachemnt belongs to above user
 
   ```
