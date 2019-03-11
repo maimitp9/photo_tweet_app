@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
   skip_before_action :authenticate_user, only: [:new, :create]
-  before_action :validate_params, only: :create
   
   # GET '/login'
   # return root_path is user logged_in? otherwise return to login 
@@ -11,6 +10,7 @@ class SessionsController < ApplicationController
   # POST '/login', login the requested user if authenticate
   # set session if login success otherwise retuen to login
   def create
+    validate_params; return if performed?
     user = User.find_by(user_name: params[:session][:user_name])
     if user && user.authenticate(params[:session][:password])
       log_in user
@@ -33,7 +33,7 @@ class SessionsController < ApplicationController
   def validate_params
     @user =  Validation::LogIn.new(params[:session])
     if !@user.valid?
-      render :new
+      render :new 
     end
   end
 end
