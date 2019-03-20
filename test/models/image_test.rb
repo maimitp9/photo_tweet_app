@@ -37,7 +37,7 @@ class ImageTest < ActiveSupport::TestCase
   test "#by_user -> list current user photos" do
     @image.save
     other_user = User.create(user_name: 'other_user', password: '12345678', password_confirmation: '12345678')
-    image = other_user.images.create(title: 'other_user_photo', photo: upload_file("#{Rails.root}/public/img_1.jpeg"))
+    other_user.images.create(title: 'other_user_photo', photo: upload_file("#{Rails.root}/public/img_1.jpeg"))
     list = Image.by_user(@user)
     assert_equal 2, list.size
     assert_not_equal other_user.id, list.first.user_id

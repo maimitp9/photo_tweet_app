@@ -47,8 +47,8 @@ class UserTest < ActiveSupport::TestCase
   # ActiveRecord Association Tests
   test "#images" do
     @user.save
-    image_1 = @user.images.create(title: 'image_1_title', photo: upload_file("#{Rails.root}/public/img_1.jpeg"))
-    image_2 = @user.images.build(title: 'image_2_title', photo: upload_file("#{Rails.root}/public/img_1.jpeg"))
+    @user.images.create(title: 'image_1_title', photo: upload_file("#{Rails.root}/public/img_1.jpeg"))
+    @user.images.create(title: 'image_2_title', photo: upload_file("#{Rails.root}/public/img_1.jpeg"))
     assert_equal 2, @user.images.size
   end
 end
