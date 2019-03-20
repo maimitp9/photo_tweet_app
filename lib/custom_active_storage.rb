@@ -12,7 +12,7 @@ module CustomActiveStorage
   # return ActionDispatch::Http::UploadedFile object
   # params -> path (i.e ~/photo_sharing_app/public/img_1.jpeg)
   def upload_file(path)
-    extension = File.extname(path) # return file extendion
+    extension = File.extname(path) # return file extention
     filename = File.basename(path, ".*") # return file name
     tempfile = Tempfile.new(['tempfile',extension]) # create tempfile
     tempfile.binmode # set binmode
@@ -22,7 +22,7 @@ module CustomActiveStorage
     # get MIME type form file extendion
     mime_type = Mime::Type.lookup_by_extension(extension.gsub('.','')).to_s
     # prepare ActionDispatch::Http::UploadedFile
-    img_tempfile = ActionDispatch::Http::UploadedFile.new(tempfile: tempfile, filename: "#{filename}.#{extension}", type: mime_type)
+    return ActionDispatch::Http::UploadedFile.new(tempfile: tempfile, filename: "#{filename}.#{extension}", type: mime_type)
   end
 
 end
